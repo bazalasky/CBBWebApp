@@ -1,0 +1,15 @@
+@using CBBWebApp.Controllers
+@{
+    ViewData["Title"] = "Data Page";
+}
+
+@model CBBWebApp.Models.DataModel.CollegeModel
+
+<form asp-controller="Data" asp-action="RunLiveMatchup" method="post">
+    <h1 class="display-4">College Basketball Simulator</h1>
+    <h3>Select Team 1</h3>
+    <select class="form-select" asp-items="Model.TeamNames" asp-for="SelectedTeam1"></select>
+    <h3>Select Team 2</h3>
+    <select class="form-select" asp-items="Model.TeamNames" asp-for="SelectedTeam2"></select>
+    <button type="submit" class="btn btn-primary">Run Simulation</button>
+</form>
